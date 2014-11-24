@@ -32,7 +32,8 @@ def strip_verses(doc):
 
 
 def strip_marks(doc):
-    doc = re.sub(r'⸀|⸂|⸃|⸁', '', doc)
+    doc = re.sub(r' *— *', ' — ', doc)
+    doc = re.sub(r'⸀|⸂|⸃|⸁|⸄|⸅', '', doc)
     return doc
 
 
